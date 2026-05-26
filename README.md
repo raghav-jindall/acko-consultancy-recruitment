@@ -6,7 +6,7 @@ Deployable on **Vercel** with static frontend + Python serverless API.
 
 ```
 ├── api/
-│   └── app.py              # Vercel serverless entry (Mangum + FastAPI)
+│   └── index.py            # Vercel serverless entry (Mangum + FastAPI)
 ├── lib/                    # Python application (routes, CSV, Excel)
 │   ├── main.py
 │   ├── config.py

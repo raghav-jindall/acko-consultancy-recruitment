@@ -1,8 +1,4 @@
-"""
-Vercel serverless entry — FastAPI via Mangum ASGI adapter.
-
-All /api/* routes are defined on the FastAPI app in lib/main.py.
-"""
+"""Vercel serverless entry — Mangum wraps the FastAPI app in lib.main (export handler only)."""
 
 import sys
 from pathlib import Path
@@ -16,4 +12,3 @@ from mangum import Mangum  # noqa: E402
 from lib.main import app as fastapi_app  # noqa: E402
 
 handler = Mangum(fastapi_app, lifespan="off")
-app = fastapi_app
